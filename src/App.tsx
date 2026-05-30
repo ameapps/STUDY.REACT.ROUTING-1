@@ -3,7 +3,7 @@ import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Help } from "./pages/Help";
 
-function App() {
+export default function App() {
   const navigate = useNavigate(); // equivalente di Router.navigate()
 
   return (
@@ -22,5 +22,3 @@ function App() {
     </>
   );
 }
-
-export default App;
