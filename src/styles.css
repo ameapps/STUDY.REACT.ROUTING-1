@@ -1,0 +1,30 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+
+.list:first {
+    column-gap: 0;
+}
+
+.color-container {
+    display: flex; 
+    flex-direction: row;
+}
+
+.color-in-container {
+    width: 100%;
+    background-color: aqua;
+    flex-direction: column;
+}
+
+.container-shower-container {
+    width: 100%;
+    background-color: greenyellow;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}

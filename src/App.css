@@ -1,9 +1,0 @@
-.list {
-    display: flex;
-    flex-direction: row;
-    column-gap: 1em;
-}
-
-.list:first {
-    column-gap: 0;
-}
