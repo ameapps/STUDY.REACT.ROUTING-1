@@ -2,6 +2,7 @@ import "./App.css";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Help } from "./pages/Help";
+import { History } from "./pages/History";
 
 export default function App() {
   const navigate = useNavigate(); // equivalente di Router.navigate()
@@ -9,8 +10,9 @@ export default function App() {
   return (
     <>
       <ul>
-        <li>
+        <li className="list">
           <Link to="/">Home</Link>
+          <Link to="/History">History</Link>
           <button onClick={() => navigate('/help')}>Help</button>
         </li>
       </ul>
@@ -18,6 +20,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Help" element={<Help />}></Route>
+        <Route path="/History" element={<History />}></Route>
       </Routes>
     </>
   );
