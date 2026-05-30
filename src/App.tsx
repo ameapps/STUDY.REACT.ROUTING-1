@@ -1,24 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { Help } from "./pages/Help";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const navigate = useNavigate(); // equivalente di Router.navigate()
 
   return (
     <>
       <ul>
         <li>
           <Link to="/">Home</Link>
+          <button onClick={() => navigate('/help')}>Help</button>
         </li>
       </ul>
       <hr />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/Help" element={<Help />}></Route>
       </Routes>
     </>
   );
