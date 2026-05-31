@@ -9,12 +9,13 @@ export function ColorInput() {
         const value = event.target.value; 
         setColor(value);
         const found = colors.find(row => row.hex === value || row.name === value);
-        if (found) console.log('found')
+        if (found) setColor({name: found.name, hex: found.hex})
     }
 
     /**Imposto il colore selezionato */
-    const setSelectedColor = (name) => {
-        setColor({name: name, hex: ''})
+    const setSelectedColor = (hex) => {
+        const found = colors.find(row => row.hex === hex);
+        if (found) setColor({name: found.name, hex: found.hex})
     }
 
     return <div className="color-in-container">
@@ -23,7 +24,7 @@ export function ColorInput() {
             <span className="color">testo scritto: {color.name}</span>
         </div>
         <div className="flex-row">
-            <select name="color-sel" id="color-sel" onChange={(e) => setSelectedColor(e.target.value)}>
+            <select name="color-sel" value={color.hex} id="color-sel" onChange={(e) => setSelectedColor(e.target.value)}>
                 {colors.map((color) => <option key={color.hex} value={color.hex}>{color.name}</option>)}
             </select>
             <p className="color">colore selez. {color.name}</p>
