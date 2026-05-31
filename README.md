@@ -30,3 +30,11 @@ npm run build
 -nel link dove si vuole navigare, si può: 
 --> usare il componente <Link to="">
 --> usare l'hook useNavigate
+
+## COME SI USA USE CONTEXT 
+
+Lo use context in react funziona a livello logico come un servizio in angular. 
+E' un modo per accedere pubblicamente a delle risorse comuni in giro nel codice.
+Per usare use context occorre: 
+-creare un servizio
+TODO CONTINUARE README
