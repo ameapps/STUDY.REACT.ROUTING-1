@@ -2,7 +2,7 @@ import React from 'react';
 import { useTimer } from '../context/timer-context';
 
 export default function DisplayTimer() {
-  const { secondi } = useTimer(null);
+  const { secondi } = useTimer();
 
   console.log("%c[Render] DisplayTimer", "color: green");
 

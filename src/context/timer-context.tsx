@@ -43,5 +43,9 @@ export function TimerProvider({ children }) {
 
 // Custom Hook per usare il servizio facilmente
 export function useTimer() {
-  return useContext(TimerContext);
+  const cts = useContext(TimerContext);
+  if (cts === null) {
+    throw new Error("useTimer deve essere usato all'interno di un TimerProvider");
+  }
+    return cts;
 }
