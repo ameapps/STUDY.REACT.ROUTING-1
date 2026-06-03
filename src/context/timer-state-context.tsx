@@ -2,7 +2,7 @@ import React, { createContext, useContext, useRef, useState } from 'react';
 
 const TimerContext = createContext(null);
 
-export function TimerProvider({ children }) {
+export function TimerProvider1({ children }) {
   const [secondi, setSecondi] = useState(0);
   const timerRef = useRef(null);
 
@@ -38,10 +38,10 @@ export function TimerProvider({ children }) {
 }
 
 // Custom Hook - per non scrivere useContext(TimerContext) in ogni componente che vuole accedere al timer
-export function useTimer() {
+export function useTimer1() {
   const cts = useContext(TimerContext);
   if (cts === null) {
-    throw new Error("useTimer deve essere usato all'interno di un TimerProvider");
+    throw new Error("useTimer1 deve essere usato all'interno di un TimerProvider1");
   }
     return cts;
 }
