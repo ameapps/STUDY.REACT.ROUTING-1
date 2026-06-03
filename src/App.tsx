@@ -5,7 +5,7 @@ import { Help } from "./pages/Help";
 import { History } from "./pages/History";
 import { PieChart } from "./pages/PieChart";
 import { ColorVisualizer } from "./pages/ColorVisualizer/ColorVisualizer";
-import DisplayTimer from "./pages/timer";
+import DisplayTimer from "./pages/Timer";
 
 export default function App() {
   const navigate = useNavigate(); // equivalente di Router.navigate()

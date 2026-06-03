@@ -2,7 +2,7 @@ import React from 'react';
 import { useTimer } from '../context/timer-context';
 
 export default function DisplayTimer() {
-  const { secondi } = useTimer();
+  const { secondi, avviaTimer, fermaTimer, resettaTimer } = useTimer();
 
   console.log("%c[Render] DisplayTimer", "color: green");
 
@@ -12,6 +12,15 @@ export default function DisplayTimer() {
       <p style={{ fontSize: '24px', fontWeight: 'bold' }}>
         Tempo trascorso: {secondi} secondi
       </p>
+      <button className="start" onClick={avviaTimer}>
+        Avvia Timer
+      </button>
+      <button className="stop" onClick={fermaTimer}>
+        Ferma Timer
+      </button>
+      <button className="reset" onClick={resettaTimer}>
+        Resetta Timer
+      </button>
     </div>
   );
 }
